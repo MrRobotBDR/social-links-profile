@@ -29,9 +29,8 @@ body {
 }
 
 .container {
-	width: 24rem;
+	min-width: 24rem;
 	height: 38.1rem;
-
 	background-color: var(--dark--grey);
 	border-radius: 12px;
 	text-align: center;
@@ -63,37 +62,53 @@ h1 {
 
 #about {
 	font-size: 14px;
-	font-style: normal;
 	font-weight: 400;
-	line-height: 150%; /* 21px */
 	margin-bottom: 24px;
 }
 
 .links {
-	display: flex;
-	justify-content: center;
+	width: 304px;
+	text-align: center;
+	margin: auto;
 }
 ul {
 	list-style: none;
 }
 
 li {
-	background-color: var(--grey);
 	margin-bottom: 16px;
-	border-radius: 8px;
-	padding: 12px 0;
+
+	width: 100%;
 }
 
 a {
-	width: 300px;
+	background-color: var(--grey);
+	padding: 12px;
 	text-decoration: none;
 	color: var(--white);
 	font-size: 14px;
-	font-style: normal;
 	font-weight: 700;
-	line-height: 150%; /* 21px */
+	border-radius: 8px;
+	display: block;
+	transition: 0.3s ease-in-out;
 }
 
 a:hover {
 	background-color: #c4f82a;
+	color: var(--dark--grey);
+}
+
+@media only screen and (max-width: 480px) {
+	.container {
+		min-width: 327px;
+		height: 36.9rem;
+	}
+
+	.avatar {
+		margin-top: 24px;
+	}
+
+	.links {
+		width: 279px;
+	}
 }
